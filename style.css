@@ -1,0 +1,551 @@
+/* ==========================================================================
+   1. VARIÁVEIS DE CORES E FLUIDEZ
+   ========================================================================== */
+   :root {
+    /* Paleta de Cores Vibrantes */
+    --blue-vivid: #377EC0;
+    --indigo-deep: #5460AC;
+    --teal-green: #12BAAA;
+    --sky-soft: #9FD2D6;
+    --sun-yellow: #FBDF54;
+    --orange-bright: #F7891F;
+    --coral-red: #F04F52;
+  
+    /* Fontes e Arredondamento Fluido */
+    --font-heading: 'Manrope', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --body-size: 16px;
+    --radius-sm: 16px;
+    --radius-md: 24px;
+    --radius-lg: 40px;
+  
+    /* Sombras Macias para Efeito Fluido */
+    --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+    --focus-ring: #FBDF54;
+  }
+  
+  /* Reset básico */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-size: var(--body-size);
+  }
+  
+  body {
+    font-family: var(--font-body);
+    background-color: var(--blue-vivid);
+    color: #132438;
+    line-height: 1.7;
+  }
+  
+  :focus-visible {
+    outline: 4px solid var(--focus-ring);
+    outline-offset: 4px;
+  }
+  
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    background: var(--coral-red);
+    color: #ffffff;
+    padding: 12px 24px;
+    z-index: 1000;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-weight: 800;
+  }
+  .skip-link:focus {
+    top: 10px;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .section {
+    padding: 90px 0;
+  }
+  
+  /* ==========================================================================
+     2. CABEÇALHO (FLUIDO E SEM BORDAS)
+     ========================================================================== */
+  .topbar {
+    background-color: rgba(55, 126, 192, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 18px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  }
+  
+  .brand {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .brand-name span { 
+    color: var(--sun-yellow); 
+  }
+  
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 6px;
+    font-weight: 700;
+    padding: 10px 18px;
+    border-radius: var(--radius-sm);
+    transition: all 0.3s ease;
+  }
+  nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--sun-yellow);
+  }
+  
+  .access-open {
+    background: var(--sun-yellow);
+    border: none;
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 800;
+    color: #132438;
+    box-shadow: 0 4px 15px rgba(251, 223, 84, 0.4);
+    transition: all 0.3s ease;
+  }
+  .access-open:hover {
+    background: var(--coral-red);
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+  
+  .access-panel {
+    background: var(--indigo-deep);
+    color: #ffffff;
+    padding: 24px 0;
+  }
+  .access-controls button {
+    background: var(--sun-yellow);
+    border: none;
+    padding: 10px 18px;
+    margin-right: 8px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 800;
+    color: #132438;
+    transition: transform 0.2s;
+  }
+  .access-controls button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ==========================================================================
+     3. HERO / INÍCIO (GRADIENTE VIVO)
+     ========================================================================== */
+  .hero {
+    background: linear-gradient(180deg, var(--blue-vivid) 0%, var(--indigo-deep) 100%);
+    color: #ffffff;
+    padding: 100px 0 80px 0;
+  }
+  .hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3.4rem;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  .hero-description {
+    font-size: 1.35rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 34px;
+  }
+  .eyebrow {
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--sun-yellow);
+    margin-bottom: 12px;
+    display: inline-block;
+  }
+  
+  .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 36px;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    font-size: 1.1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .button.primary {
+    background-color: var(--coral-red);
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(240, 79, 82, 0.4);
+  }
+  .button.primary:hover {
+    background-color: var(--orange-bright);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(247, 137, 31, 0.5);
+  }
+  .button.text-button {
+    background: var(--sun-yellow);
+    color: #132438;
+    box-shadow: 0 10px 25px rgba(251, 223, 84, 0.3);
+  }
+  .button.text-button:hover {
+    background: #ffffff;
+    transform: translateY(-4px);
+  }
+  
+  .gradient-word {
+    color: var(--sun-yellow);
+  }
+  
+  /* ==========================================================================
+     4. SOBRE O PROJETO (TRANSIÇÃO FLUIDA PARA O VERMELHO)
+     ========================================================================== */
+  .principles {
+    background: linear-gradient(180deg, var(--indigo-deep) 0%, var(--coral-red) 100%);
+    padding: 60px 0;
+  }
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .principle {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 28px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease;
+  }
+  .principle:hover {
+    transform: translateY(-5px);
+  }
+  .principle-icon {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-section {
+    background-color: var(--coral-red);
+    color: #ffffff;
+  }
+  .about-section h2 {
+    color: #ffffff;
+    font-size: 2.7rem;
+    margin-bottom: 20px;
+  }
+  .about-section p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.2rem;
+  }
+  .about-section h2 span {
+    color: var(--sun-yellow);
+  }
+  .about-section .inline-link {
+    color: var(--sun-yellow);
+    font-weight: 800;
+    font-size: 1.15rem;
+  }
+  .about-tags span {
+    background: var(--sun-yellow);
+    color: #132438;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 800;
+    display: inline-block;
+    margin: 8px 8px 0 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  
+  /* ==========================================================================
+     5. FERRAMENTAS / RECURSOS (TRANSIÇÃO PARA O AMARELO)
+     ========================================================================== */
+  .experiences-section {
+    background: linear-gradient(180deg, var(--coral-red) 0%, var(--sun-yellow) 100%);
+    color: #132438;
+  }
+  .experiences-section h2 {
+    font-size: 2.7rem;
+    color: #132438;
+  }
+  .experiences-section h2 span {
+    color: var(--coral-red);
+  }
+  .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin-top: 40px;
+  }
+  .experience-card {
+    background: #ffffff;
+    padding: 36px 28px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+  }
+  .experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+  }
+  .experience-card a {
+    display: inline-block;
+    margin-top: 16px;
+    color: var(--coral-red);
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  /* ==========================================================================
+     6. ROTINA VISUAL (TRANSIÇÃO PARA O VERDE-MENTA)
+     ========================================================================== */
+  .routine-section {
+    background: linear-gradient(180deg, var(--sun-yellow) 0%, var(--teal-green) 100%);
+    color: #ffffff;
+  }
+  .routine-section h2 {
+    font-size: 2.7rem;
+    color: #ffffff;
+  }
+  .routine-section h2 span {
+    color: var(--sun-yellow);
+  }
+  .routine-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+  }
+  .routine-form input[type="text"] {
+    flex: 1;
+    padding: 18px;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 1.05rem;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.08);
+  }
+  .suggestions button {
+    background: #ffffff;
+    border: none;
+    color: #132438;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 800;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+  }
+  .suggestions button:hover {
+    transform: scale(1.05);
+    background: var(--sun-yellow);
+  }
+  
+  .routine-board {
+    background: #ffffff;
+    color: #132438;
+    padding: 36px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+  }
+  .routine-list li {
+    background: var(--sky-soft);
+    padding: 18px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  }
+  .routine-list li button {
+    background: var(--coral-red);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 800;
+    box-shadow: 0 4px 10px rgba(240, 79, 82, 0.3);
+  }
+  
+  /* ==========================================================================
+     7. MAPA DAS EMOÇÕES (AZUL-CELESTE FLUIDO)
+     ========================================================================== */
+  .emotions-section {
+    background: linear-gradient(180deg, var(--teal-green) 0%, var(--sky-soft) 100%);
+    color: #132438;
+  }
+  .emotions-section h2 {
+    font-size: 2.7rem;
+    color: #132438;
+  }
+  .emotions-section h2 span {
+    color: var(--coral-red);
+  }
+  .emotion-picker {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    margin: 28px 0;
+  }
+  .emotion {
+    background: #ffffff;
+    border: none;
+    padding: 24px 16px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 800;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+  }
+  .emotion:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+  }
+  .emotion[aria-pressed="true"] {
+    background-color: var(--sun-yellow);
+    transform: scale(1.05);
+  }
+  .feeling-result {
+    background: var(--indigo-deep);
+    color: #ffffff;
+    padding: 28px;
+    border-radius: var(--radius-md);
+    font-weight: 800;
+    font-size: 1.25rem;
+    box-shadow: var(--shadow-soft);
+  }
+  
+  /* ==========================================================================
+     8. PAUSA CONSCIENTE (LARANJA FLUIDO)
+     ========================================================================== */
+  .pause-section {
+    background: linear-gradient(180deg, var(--sky-soft) 0%, var(--orange-bright) 100%);
+    color: #ffffff;
+    padding: 90px 0;
+    text-align: center;
+  }
+  .pause-section h2, .pause-section p {
+    color: #ffffff;
+  }
+  .pause-ring {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 28px auto;
+    font-weight: 800;
+    font-size: 1.9rem;
+    color: var(--coral-red);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  }
+  
+  /* ==========================================================================
+     9. CONTATO & RODAPÉ (AZUL E ROXO FLUIDO)
+     ========================================================================== */
+  .contact-section {
+    background: linear-gradient(180deg, var(--orange-bright) 0%, var(--blue-vivid) 100%);
+    color: #ffffff;
+  }
+  .contact-section h2 {
+    color: #ffffff;
+  }
+  .contact-section h2 span {
+    color: var(--sun-yellow);
+  }
+  .contact-form {
+    background: #ffffff;
+    color: #132438;
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    margin-top: 28px;
+  }
+  .contact-form label {
+    font-weight: 800;
+    display: block;
+    margin-top: 16px;
+  }
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    background: var(--sky-soft);
+    border-radius: var(--radius-sm);
+    font-size: 1.05rem;
+    margin-top: 8px;
+  }
+  
+  footer {
+    background-color: var(--indigo-deep);
+    color: #ffffff;
+    padding: 60px 0 35px 0;
+  }
+  footer a {
+    color: var(--sun-yellow);
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .footer-main, .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer-bottom {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 0.95rem;
+    color: var(--sky-soft);
+  }
+  
+  /* Celular */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.4rem;
+    }
+    .menu-toggle {
+      display: block;
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      font-size: 1.6rem;
+    }
+    nav {
+      display: none;
+    }
+    nav.open {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 16px;
+    }
+  }
