@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101d3a">
+  <meta name="description" content="Acolhe TEA — um espaço digital acolhedor, previsível e acessível para pessoas autistas, famílias e educadores.">
+  <title>Acolhe TEA | Cada jeito de sentir. Cada jeito de ser.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Acolhe TEA, página inicial">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-name">acolhe<span>TEA</span></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menu" type="button">
+        <span></span><span></span>
+      </button>
+      <nav id="mainNav" aria-label="Navegação principal">
+        <a href="#sobre">O projeto</a>
+        <a href="#recursos">Experiências</a>
+        <a href="#rotina">Minha rotina</a>
+        <a href="#emocoes">Emoções</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <button class="access-open" id="accessOpen" aria-expanded="false" aria-controls="accessPanel" type="button">
+        <span aria-hidden="true">◐</span> Acessibilidade
+      </button>
+    </div>
+    <div class="access-panel" id="accessPanel" hidden>
+      <div class="container access-inner">
+        <div class="access-intro"><strong>Seu espaço, seu jeito.</strong><span>Personalize a experiência.</span></div>
+        <div class="access-controls">
+          <button id="fontDown" type="button" aria-label="Diminuir tamanho do texto">A− Texto</button>
+          <button id="fontUp" type="button" aria-label="Aumentar tamanho do texto">A+ Texto</button>
+          <button id="contrastToggle" type="button" aria-pressed="false">Alto contraste</button>
+          <button id="calmToggle" type="button" aria-pressed="false">Modo tranquilo</button>
+          <button id="resetAccess" type="button">Restaurar padrão</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="hero-orbit orbit-a" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-b" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> UM ESPAÇO DE ACOLHIMENTO E POSSIBILIDADES</div>
+          <h1>Cada jeito de sentir.<br><span class="gradient-word">Cada jeito de ser.</span></h1>
+          <p class="hero-description">Um ambiente digital para explorar emoções, organizar o dia e encontrar momentos de tranquilidade — respeitando o seu próprio ritmo.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#recursos">Explorar experiências <span aria-hidden="true">↗</span></a>
+            <a class="button text-button" href="#sobre">Conheça o projeto <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-footnote"><span class="footnote-icon"></span><span>Você escolhe como usar. Sem pressa, sem cobrança.</span></div>
+        </div>
+
+        <div class="hero-visual" role="img" aria-label="Composição abstrata colorida com formas orgânicas e a mensagem seu jeito importa">
+          <div class="visual-grid" aria-hidden="true"></div>
+          <div class="shape shape-coral"></div>
+          <div class="shape shape-lilac"></div>
+          <div class="shape shape-mint"></div>
+          <div class="shape shape-yellow"></div>
+          <div class="visual-spark spark-one"></div>
+          <div class="visual-spark spark-two">✦</div>
+          <div class="visual-note">
+            <span class="note-symbol">♡</span>
+            <strong>Seu jeito<br>importa.</strong>
+            <small>respeito • autonomia • inclusão</small>
+          </div>
+          <div class="floating-chip chip-top"><span>●</span> Um dia de cada vez</div>
+          <div class="floating-chip chip-bottom"><span>✦</span> Você pertence</div>
+        </div>
+      </div>
+      <div class="hero-bottom container">
+        <span>ACOLHIMENTO</span><i></i><span>ACESSIBILIDADE</span><i></i><span>AUTONOMIA</span>
+      </div>
+    </section>
+
+    <section class="principles" aria-label="Princípios do Acolhe TEA">
+      <div class="container principles-grid">
+        <article class="principle"><span class="principle-icon icon-blue">◷</span><div><strong>Mais previsibilidade</strong><p>Organize o que vem a seguir.</p></div></article>
+        <article class="principle"><span class="principle-icon icon-purple">◇</span><div><strong>Comunicação acessível</strong><p>Informações claras e diretas.</p></div></article>
+        <article class="principle"><span class="principle-icon icon-coral">♡</span><div><strong>Respeito às diferenças</strong><p>Seu ritmo merece espaço.</p></div></article>
+      </div>
+    </section>
+
+    <section class="about-section section" id="sobre">
+      <div class="container about-grid">
+        <div class="about-heading">
+          <span class="eyebrow dark-eyebrow">01 / SOBRE O PROJETO</span>
+          <h2>Incluir é criar espaço para <span>todos os jeitos de existir.</span></h2>
+          <div class="about-stamp" aria-hidden="true"><span>+</span><small>feito para<br>acolher</small></div>
+        </div>
+        <div class="about-copy">
+          <p class="about-lead">O Acolhe TEA é uma proposta de ambiente digital pensado para apoiar a organização da rotina, a expressão das emoções e o bem-estar.</p>
+          <p>Não existe uma única forma de ser autista — e também não existe uma experiência ideal para todo mundo. Por isso, reunimos ferramentas opcionais e personalizáveis, para que cada pessoa encontre o que faz sentido para si.</p>
+          <a class="inline-link" href="#recursos">Descubra o que você pode explorar <span>↗</span></a>
+          <div class="about-tags"><span>Autonomia em primeiro lugar</span><span>Respeito à individualidade</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experiences-section section" id="recursos">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">02 / FERRAMENTAS DE APOIO</span><h2>Pequenas ferramentas.<br><span>Novas possibilidades.</span></h2></div>
+          <p>Explore no seu tempo. Cada experiência foi pensada para apoiar um momento diferente do dia.</p>
+        </div>
+        <div class="experience-grid">
+          <article class="experience-card routine-card">
+            <div class="experience-top"><span class="experience-number">01</span><span class="experience-art routine-art" aria-hidden="true"><i></i><i></i><i></i></span></div>
+            <div class="experience-content"><span class="card-kicker">ORGANIZAÇÃO</span><h3>Rotina visual</h3><p>Transforme tarefas em etapas claras e acompanhe seu dia uma atividade por vez.</p><a href="#rotina">Montar minha rotina <span>↗</span></a></div>
+          </article>
+          <article class="experience-card emotion-card">
+            <div class="experience-top"><span class="experience-number">02</span><span class="experience-art emotion-art" aria-hidden="true"><span></span><i></i></span></div>
+            <div class="experience-content"><span class="card-kicker">EXPRESSÃO</span><h3>Mapa das emoções</h3><p>Encontre uma palavra, um símbolo ou apenas um ponto de partida para o que sente.</p><a href="#emocoes">Explorar emoções <span>↗</span></a></div>
+          </article>
+          <article class="experience-card pause-card">
+            <div class="experience-top"><span class="experience-number">03</span><span class="experience-art pause-art" aria-hidden="true"><span></span><i></i></span></div>
+            <div class="experience-content"><span class="card-kicker">BEM-ESTAR</span><h3>Pausa consciente</h3><p>Reserve alguns segundos para desacelerar. Você decide se e quando quer começar.</p><a href="#pausa">Fazer uma pausa <span>↗</span></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="routine-section section" id="rotina">
+      <div class="container routine-layout">
+        <div class="routine-intro">
+          <span class="eyebrow dark-eyebrow">03 / ORGANIZAÇÃO VISUAL</span>
+          <h2>Um passo de cada vez.<br><span>Do seu jeito.</span></h2>
+          <p>Crie uma sequência que faça sentido para você. Adicione atividades, use sugestões ou reorganize seu dia conforme precisar.</p>
+          <div class="routine-tip"><span></span><p><strong>Dica:</strong> não precisa preencher tudo. Sua rotina pode mudar junto com você.</p></div>
+          <form id="routineForm" class="routine-form">
+            <label for="activityInput">Adicionar uma atividade</label>
+            <div class="input-row"><input id="activityInput" type="text" maxlength="70" placeholder="Ex.: tomar café da manhã" required><button class="button primary" type="submit">Adicionar <span>+</span></button></div>
+          </form>
+          <div class="suggestions"><span class="suggestion-label">Sugestões rápidas</span><button type="button" data-activity="Acordar">Acordar</button><button type="button" data-activity="Estudar">Estudar</button><button type="button" data-activity="Fazer uma pausa">Pausa</button></div>
+        </div>
+        <div class="routine-board">
+          <div class="board-topline"><span>MEU PAINEL DO DIA</span><span class="board-live"><i></i> Sua rotina</span></div>
+          <div class="board-heading"><div><h3>Minha sequência</h3><p>O que vem a seguir?</p></div><div class="board-count" id="routineCount">0 atividades</div></div>
+          <ol id="routineList" class="routine-list"><li class="empty-state" id="emptyRoutine"><span class="empty-icon">＋</span><span>Sua rotina aparecerá aqui quando você adicionar uma atividade.</span></li></ol>
+          <div class="board-footer"><span>As atividades ficam neste navegador durante a sessão.</span><button id="clearRoutine" class="clear-button" type="button">Limpar rotina <span>↺</span></button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="emotions-section section" id="emocoes">
+      <div class="container emotion-layout">
+        <div class="emotion-intro">
+          <span class="eyebrow">04 / MAPA DAS EMOÇÕES</span>
+          <h2>Como está o seu <span>mundo por dentro?</span></h2>
+          <p>Às vezes é fácil saber. Às vezes, não. Escolha o que mais se aproxima do que você sente — ou não escolha nada. Tudo bem também.</p>
+          <div class="emotion-reminder"><span>♡</span> Toda emoção merece ser acolhida.</div>
+        </div>
+        <div class="emotion-panel">
+          <div class="emotion-panel-head"><span>ENCONTRE UMA OPÇÃO</span><span>Você pode mudar depois</span></div>
+          <div class="emotion-picker" role="group" aria-label="Escolha uma emoção">
+            <button class="emotion feeling-happy" data-feeling="Feliz" aria-pressed="false" type="button"><span class="emotion-face"></span><strong>Feliz</strong></button>
+            <button class="emotion feeling-calm" data-feeling="Calmo(a)" aria-pressed="false" type="button"><span class="emotion-face"></span><strong>Calmo(a)</strong></button>
+            <button class="emotion feeling-tired" data-feeling="Cansado(a)" aria-pressed="false" type="button"><span class="emotion-face">☾</span><strong>Cansado(a)</strong></button>
+            <button class="emotion feeling-anxious" data-feeling="Ansioso(a)" aria-pressed="false" type="button"><span class="emotion-face"></span><strong>Ansioso(a)</strong></button>
+            <button class="emotion feeling-overwhelmed" data-feeling="Sobrecarregado(a)" aria-pressed="false" type="button"><span class="emotion-face"></span><strong>Sobrecarregado(a)</strong></button>
+            <button class="emotion feeling-unsure" data-feeling="Não sei dizer" aria-pressed="false" type="button"><span class="emotion-face">?</span><strong>Não sei dizer</strong></button>
+          </div>
+          <p class="feeling-result" id="feelingResult" aria-live="polite">Sua escolha aparecerá aqui. Você pode mudar quando quiser.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pause-section" id="pausa">
+      <div class="pause-decoration pause-decoration-one" aria-hidden="true"></div>
+      <div class="pause-decoration pause-decoration-two" aria-hidden="true"></div>
+      <div class="container pause-content">
+        <div class="pause-visual" aria-hidden="true"><div class="pause-ring"><span>30</span><small>segundos</small></div></div>
+        <div class="pause-copy"><span class="eyebrow">05 / UM MOMENTO PARA VOCÊ</span><h2>Respire. O mundo pode esperar um pouquinho.</h2><p>Se for confortável, inspire devagar, solte o ar e perceba o ambiente ao seu redor. Não existe jeito certo de fazer esta pausa.</p><div class="pause-actions"><button id="pauseButton" class="button pause-button" type="button">Começar pausa de 30 segundos <span>→</span></button><p id="pauseMessage" class="pause-message" aria-live="polite">Sem pressão. Faça no seu próprio ritmo.</p></div></div>
+      </div>
+    </section>
+
+    <section class="contact-section section" id="contato">
+      <div class="container contact-layout">
+        <div class="contact-intro"><span class="eyebrow dark-eyebrow">06 / CONTATO</span><h2>Uma ideia sua pode deixar este espaço <span>ainda melhor.</span></h2><p>Conte o que você gostaria de encontrar por aqui ou sugira melhorias de acessibilidade.</p><div class="contact-disclaimer"><span>ⓘ</span><p><strong>Projeto demonstrativo.</strong> Este formulário simula o envio e não transmite nem armazena informações em um servidor.</p></div></div>
+        <form id="contactForm" class="contact-form">
+          <div class="form-heading"><span>VAMOS CONVERSAR?</span><span class="form-decoration"></span></div>
+          <label for="name">Como podemos chamar você?</label><input id="name" name="name" type="text" placeholder="Seu nome" autocomplete="name" required>
+          <label for="email">Seu e-mail</label><input id="email" name="email" type="email" placeholder="voce@email.com" autocomplete="email" required>
+          <label for="message">Sua mensagem</label><textarea id="message" name="message" rows="4" placeholder="Escreva sua ideia ou sugestão..." required></textarea>
+          <button class="button primary" type="submit">Preparar mensagem <span>↗</span></button>
+          <p id="contactFeedback" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="#inicio" aria-label="Acolhe TEA, voltar ao início"><span class="brand-mark"><span></span><span></span><span></span></span><span class="brand-name">acolhe<span>TEA</span></span></a>
+      <p>Cada jeito de sentir. Cada jeito de ser.</p>
+      <a class="footer-top" href="#inicio">Voltar ao início ↑</a>
+    </div>
+    <div class="container footer-bottom"><span>Projeto educacional • Acessibilidade e inclusão</span><span>Feito com respeito às diferenças e à autonomia.</span></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
